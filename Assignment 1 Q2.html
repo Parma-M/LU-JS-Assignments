@@ -1,0 +1,26 @@
+<html> 
+
+<head> 
+    <h2>Assign 1 Q2 : Print Current Window Current
+    </h2> 
+
+</head> 
+
+<body> 
+
+	
+	<button id="print-button" onclick="printThisPage">Print This Page</button>
+<p>This prints the contents of the current Page.</p>
+<script>
+var printer = document.getElementById("print-button");
+
+function printPage() {
+  window.print();
+}
+
+printer.addEventListener("click", printPage);
+
+</script>
+
+</body> 
+<html> 

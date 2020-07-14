@@ -1,0 +1,30 @@
+<html> 
+
+<head> <h2> Assign 1 Q1 Current Date and Time </h2>
+	
+</head> 
+
+<body> 
+	<script> 
+		var CurrentDate = new Date(); 
+		var CurrentDay = CurrentDate.getDay(); 
+		
+		var weekday = ['Sunday', 'Monday', 'Tuesday', 
+			'Wednesday', 'Thursday', 'Friday', 'Saturday' 
+		]; 
+		document.write("\t \t Today is : " + weekday[CurrentDay]); 
+		document.write("<br/>"); 
+		
+		var hours = CurrentDate.getHours(); 
+		var ampm = hours >= 12 ? 'PM' : 'AM'; 
+		hours = hours % 12; 
+		hours = hours ? hours : 12; 
+		var minutes = CurrentDate.getMinutes(); 
+		minutes = minutes < 10 ? '0' + minutes : minutes; 
+		var CurrentTime = hours + " " + ampm + " : " + minutes + 
+			" : " + CurrentDate.getMilliseconds(); 
+		document.write("\tCurrent time is : " + CurrentTime); 
+	</script> 
+</body> 
+
+</html> 
