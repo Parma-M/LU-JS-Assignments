@@ -1,0 +1,111 @@
+Q1 --- console functions
+console.log() - used to log(print) the output to the console
+console.error() - Used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color.
+console.warn() - Used to log warning message to the console. By default the warning message will be highlighted with yellow color.
+console.clear() - Used to clear the console.
+console.time() & console.timeEnd() - Used to know the amount of time spend by a block or a function,
+console.table() - Used to generate a table inside a console. The input must be an array or an object which will be shown as a table.
+console.count() - used to count the number that the function hit by this counting method.
+etc....
+
+Q2.
+var: The scope of a variable defined with the keyword “var” is limited to the “function” within which it is defined. If it is defined outside any function, the scope of the variable is global.
+var is “function scoped”.
+
+code eg.
+{
+  var a=10;
+  console.log(a);
+} //block 1
+{
+  a++;
+  console.log(a);
+} //block 2
+/* Since we are using "var a=10", scope of "a" is limited to the function within which it is defined. In this case it is within the global function scope */
+
+
+let: The scope of a variable defined with the keyword “let” or “const” is limited to the “block” defined by curly braces i.e. {} .
+“let” and “const” are“block scoped”.
+
+code eg
+
+{
+ let a=10;
+ console.log(a);
+} //block 1
+{
+  a++;
+  console.log(a);
+} //block 2
+/* Since we are using "let a=10", scope of "a" is limited to block 1 and "a" is not recognized in block 2 */
+
+
+const: The scope of a variable defined with the keyword “const” is limited to the block defined by curly braces. However if a variable is defined with keyword const, it cannot be reassigned.
+“const” cannot be re-assigned to a new value. However it CAN be mutated.
+
+code eg
+
+{
+ const PI=3.14;
+ console.log(PI);
+} //block 1
+{
+  console.log(PI);
+} //block 2
+/* Since we are using "const PI=3.14", scope of "PI" is limited to block 1 and "PI" is not recognized in block 2 */
+
+Q3.
+-- JS Data types
+JavaScript Numbers
+JavaScript has only one type of numbers.
+Numbers can be written with, or without decimals.
+var x1 = 34.00;     // Written with decimals
+var x2 = 34;        // Written without decimals
+
+JavaScript Booleans
+Booleans can only have two values: true or false.
+Booleans are often used in conditional testing.
+e.g. 
+var x = 5;
+var y = 5;
+var z = 6;
+(x == y)       // Returns true
+(x == z)       // Returns false
+
+JavaScript Arrays
+JavaScript arrays are written with square brackets.
+
+Array items are separated by commas.
+
+The following code declares (creates) an array called cars, containing three items (car names):
+
+Example
+var cars = ["Saab", "Volvo", "BMW"];
+
+
+JavaScript Objects
+JavaScript objects are written with curly braces {}.
+
+Object properties are written as name:value pairs, separated by commas.
+
+Example
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+Undefined
+In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+
+Example
+var car;    // Value is undefined, type is undefined
+
+Null
+In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
+
+Unfortunately, in JavaScript, the data type of null is an object.
+
+You can consider it a bug in JavaScript that typeof null is an object. It should be null.
+
+You can empty an object by setting it to null:
+
+Example
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+person = null;    // Now value is null, but type is still an object
